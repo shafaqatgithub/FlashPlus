@@ -1,22 +1,17 @@
-import { useState } from 'react'
-
-import './App.css'
-import Dals from './components/Dals/Dals'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import { Outlet } from "react-router";
+import "./App.css";
+import Layout from "./Layout.jsx";
+import NewHeader from "./components/Header/NewHeader.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
-  const [count,setCount]=useState(0)
- 
-
   return (
-   <>
-   <Header/>
-   <Dals/>
-   <Footer/>
-   </>
-
-  )
+    <div className="app">
+      <NewHeader />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
