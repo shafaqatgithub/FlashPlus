@@ -23,6 +23,7 @@ const theme = createTheme({
     },
     white: {
       main: "#ffffff",
+      contrastText: "#f00",
     },
     orange: {
       main: "#e36048",

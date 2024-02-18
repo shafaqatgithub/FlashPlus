@@ -1,31 +1,30 @@
-import React from 'react' 
-import './ProductCard.css'
-import { Link } from 'react-router-dom'
-import AddToCart from '../AddToCart/AddToCart'
+import React from "react";
+import "./product-card.css";
+import { Link } from "react-router-dom";
+import AddToCart from "../AddToCart/AddToCart";
+import { propTypes } from "react-bootstrap/esm/Image";
+import { Button, Typography } from "@mui/material";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
-const ProductCard = ({ data }) => {
-    return (
-        <div className='product'>
-            <div className='s1'>
-                <img src={data.productimage} alt={'no image'} />
-            </div>
-            <div className='s2'>
-                <h1>{data.productname}</h1>
-                <h2>{data.productprice}</h2>
-            </div>
-            <Link to={'/AddToCart/${data.id}'}>
-            <div className='addbtn'>
-                <button>Add to cart</button>
-            </div>
-           
-            </Link>
-            
+const ProductCard = ({ productImage, productName, productPrice }) => {
+  return (
+    <div className="product">
+      <img src={productImage} alt={"no image"} />
+      <div className="s2">
+        <Typography variant="h6">{productName}</Typography>
+        <Typography variant="h5">Rs. {productPrice}</Typography>
+      </div>
+      <Button endIcon={<AddShoppingCartOutlinedIcon />} color="success">
+        Add to Cart
+      </Button>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
+ProductCard.propTypes = {
+  productImage: propTypes.string,
+  productName: propTypes.string,
+  productPrice: propTypes.number,
+};
 
-
-
-
-export default ProductCard
+export default ProductCard;

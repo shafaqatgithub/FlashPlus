@@ -20,7 +20,7 @@ const categoryData = [
     categoryName: "Spices",
     categoryDescription:
       "Explore a world of flavor with our diverse range of aromatic spices, thoughtfully curated and conveniently categorized on platform",
-    categoryPageLink: "/Masalas",
+    categoryPageLink: "/spices",
   },
   {
     _id: 3,
@@ -29,7 +29,7 @@ const categoryData = [
     categoryName: "Oils",
     categoryDescription:
       "Indulge in the finest selection of cooking oils curated for your kitchen needs at our online grocery store. From heart-healthy olive oils to versatile canola oils and exotic nut oils, explore our diverse range of premium cooking oils to elevate your culinary experience.",
-    categoryPageLink: "/Oils",
+    categoryPageLink: "/oils",
   },
 ];
 

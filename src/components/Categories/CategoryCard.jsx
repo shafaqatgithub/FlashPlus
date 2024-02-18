@@ -13,7 +13,7 @@ const CategoryCard = ({ categoryImgPath, pageLink, categoryName }) => {
           <Button
             // style={{ width: "100%", textAlign: "left" }}
             variant="contained"
-            color="primary"
+            color="brandRed"
             disableElevation
           >{`explore ${categoryName}`}</Button>
         </Card.Body>
