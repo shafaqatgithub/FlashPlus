@@ -9,22 +9,23 @@ import Masalas from "./components/Masalas/Masalas";
 import Oils from "./components/Oils/Oils";
 import Contact from "./components/Contact/Contact";
 // import Home from "./components/Home/Home.jsx";
-import About from "./components/About/About.jsx";
+import About from "./views/About/About.jsx";
 // import AddToCart from "./components/AddToCart/AddToCart.jsx";
 import HomePage from "./views/home-page/HomePage.jsx";
 import App from "./App.jsx";
-import CartPage from "./views/cart-page/CartPage.jsx";
-
+import CartScreen from "./views/cart-page/CartPage.jsx";
+// import ProductScreen from "./views/product-page/ProductPage.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomePage />} />
       <Route path="/dals" element={<Dals />} />
-      <Route path="/cart" element={<CartPage />} />
+      <Route path="/cart" element={<CartScreen />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/oils" element={<Oils />} />
       <Route path="/spices" element={<Masalas />} />
+      {/* <Route path="/product/:id" element={<ProductScreen />} /> */}
     </Route>
   )
 );

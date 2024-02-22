@@ -6,7 +6,12 @@ import { propTypes } from "react-bootstrap/esm/Image";
 import { Button, Typography } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
-const ProductCard = ({ productImage, productName, productPrice }) => {
+const ProductCard = ({
+  productImage,
+  productName,
+  productPrice,
+  productId,
+}) => {
   return (
     <div className="product">
       <img src={productImage} alt={"no image"} />
@@ -14,7 +19,15 @@ const ProductCard = ({ productImage, productName, productPrice }) => {
         <Typography variant="h6">{productName}</Typography>
         <Typography variant="h5">Rs. {productPrice}</Typography>
       </div>
-      <Button endIcon={<AddShoppingCartOutlinedIcon />} color="success">
+      <Button
+        endIcon={<AddShoppingCartOutlinedIcon />}
+        onClick={
+          {
+            /** do something */
+          }
+        }
+        color="success"
+      >
         Add to Cart
       </Button>
     </div>
